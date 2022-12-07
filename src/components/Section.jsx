@@ -2,14 +2,16 @@ import React from 'react'
 import styled from 'styled-components';
 
 
-const Section = ({ title, description, backgroundImg }) => {
+const Section = ({ title, description, backgroundImg, main }) => {
   return (
     <Wrap bgImage={backgroundImg}>
       <ItemText>
         <h1>{title}</h1>
         <p>{description}</p>
-      </ItemText>      
+        <p>{main}</p>
+      </ItemText>
     </Wrap>
+    
   )
 }
 

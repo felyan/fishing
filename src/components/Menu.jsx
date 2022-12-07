@@ -3,26 +3,28 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import PhishingIcon from '@mui/icons-material/Phishing';
 
 const Menu = () => {  
   const [burgerStatus, setburgerStatus] = useState(false);
     return (
       <Container>
+        <Logo/>Horgász Egylet
         <RightMenu>
             <CostumMenu onClick={() => setburgerStatus(true)} />
-      </RightMenu>
-      <BurgerNav show={burgerStatus}>
-        <CloseWrapper>
-          <CustomClose onClick={() => setburgerStatus(false)} />
-        </CloseWrapper>
-        <Link to="/">Főoldal</Link>
-        <Link to="/fulllist">Résztvevők</Link>
-        <Link to="/totalcatching">Összes fogás</Link>
-        <Link to="/winner">Győztesek</Link>
-        <Link to="/overtheaverage">Átlag felett teljesítők</Link>
-        <Link to="/nocatch">Akik nem fogtak semmit</Link>
-      </BurgerNav>
-        </Container>
+          </RightMenu>
+        <BurgerNav show={burgerStatus}>
+          <CloseWrapper>
+            <CustomClose onClick={() => setburgerStatus(false)} />
+          </CloseWrapper>
+          <Link to="/">Főoldal</Link>
+          <Link to="/fulllist">Résztvevők</Link>
+          <Link to="/totalcatching">Összes fogás</Link>
+          <Link to="/winner">Győztesek</Link>
+          <Link to="/overtheaverage">Átlag felett teljesítők</Link>
+          <Link to="/nocatch">Akik nem fogtak semmit</Link>
+        </BurgerNav>
+      </Container>
   )
 }
 
@@ -40,8 +42,14 @@ const Container = styled.div`
   left: 0;
   right: 0;
   z-index: 1;
-  background: #1d7998;
+  background: rgba(0, 0, 0, .5);
+  color: white;
 `
+
+const Logo = styled(PhishingIcon)`
+  font-size: 50px;
+`;
+
 const RightMenu = styled.div`
   display: flex;
   align-items: flex-end;
@@ -62,7 +70,7 @@ const BurgerNav = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
-  background: #1d7998;
+  background: rgba(0, 0, 0, .5);
   width: 300px;
   z-index: 16;
   list-style: none;
