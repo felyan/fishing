@@ -21,7 +21,7 @@ const Menu = () => {
           <Link to="/fulllist">Résztvevők</Link>
           <Link to="/totalcatching">Összes fogás</Link>
           <Link to="/winner">Győztesek</Link>
-          <Link to="/overtheaverage">Átlag felett teljesítők</Link>
+          {/* <Link to="/overtheaverage">Átlag felett teljesítők</Link> */}
           <Link to="/nocatch">Akik nem fogtak semmit</Link>
         </BurgerNav>
       </Container>
