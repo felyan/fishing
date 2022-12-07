@@ -4,15 +4,15 @@ import Section from './Section';
 import { fisherman, catching } from '../data';
 
 const OverTheAverage = () => {
-  let average = totalFish / totalFisherman;
-console.log(average);
-for (let j = 0; j < catching.length; j++) {
-  let aboveAverage = 0;
-  if (catching[j] > average) {
-    aboveAverage = j;
-  }
-  console.log(`Átlag felett teljesített ${fisherman[aboveAverage]} ${catching[aboveAverage]} hallal`);
-}
+  //let average = totalFish / totalFisherman;
+// console.log(average);
+// for (let j = 0; j < catching.length; j++) {
+//   let aboveAverage = 0;
+//   if (catching[j] > average) {
+//     aboveAverage = j;
+//   }
+//   console.log(`Átlag felett teljesített ${fisherman[aboveAverage]} ${catching[aboveAverage]} hallal`);
+// }
   return (
     <Container>
       <Section
